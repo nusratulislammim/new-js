@@ -1,4 +1,3 @@
-for(const [key,value] of myObj){
-//     console.log(ley,':-',value);
-    
-// }
+const newNums = myNum.filter((num)=>{
+//     return num>4
+// })
