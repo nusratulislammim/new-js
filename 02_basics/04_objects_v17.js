@@ -55,7 +55,8 @@ console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));//true
 console.log(tinderUser.hasOwnProperty('id'));//true
-console.log(tinderUser.hasOwnProperty('ss'));
+console.log(tinderUser.hasOwnProperty('ss'));//false
+
 
 
 

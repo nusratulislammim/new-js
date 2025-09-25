@@ -1,2 +1,2 @@
 # new-js
-java-script learn
+java-script learn new
