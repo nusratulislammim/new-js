@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom4</title>
+</head>
+<body>
+    <ul class="lang">
+        <li>
+            JavaScript
+        </li>
+    </ul>
+    
+</body>
+<script>
+    function addLang(lanName){
+        const li = document.createElement('li');
+        li.innerHTML = `${lanName}`
+        document.querySelector('.lang').
+        appendChild(li)
+    }
+    addLang("python")
+    addLang("C++")
+
+
+    function addOpLang(lanName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lanName))
+        document.querySelector('.lang').appendChild(li)
+    }
+    addOpLang("None")
+
+
+    //edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang.innerHTML)//python
+    secondLang.innerHTML = "java"
+
+    const newLi = document.createElement('li')
+    newLi.textContent = "python"
+    secondLang.replaceWith(newLi)
+
+    //const firstLang = document.querySelector('li:first-child')
+    const firstLang = document.querySelector("li:nth-child(1)")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    addLang("c")
+    
+    //remove
+    const LastLang = document.querySelector("li:last-child")
+    LastLang.remove()
+    
+</script>
+</html>

@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM learning</title>
+    <title>learning DOM 1</title>
+    <style>
+        body{
+            background-color: blueviolet;
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       ul, li{
+        color: antiquewhite;
+       }
+       input{
+        padding: 5px;
+        margin: 5px;
+       }
+       .bg-black{
+        background-color: black;
+        color:aliceblue;
+       }
+    </style>
 </head>
 <body>
-    <div>
-        <h1>DOM learning on Youtube</h1>
-        <h2>Nusratul Islam Meem</h2>
-        <h2>Busratul Islam</h2>
-        <h2>Rifatul Islam Jisun</h2>
+    <div class="bg-black">
+        <h1 id="title" class="heading">DOM learning on Youtube <span style="display: :none;">test text</span></h1>
+        <h2>Object Oriented Programming</h2>
+        <h2>Structured programming</h2>
+        <h2>Web Programming</h2>
 
         <input type="password" name="" id="">
         <ul>
@@ -20,4 +38,10 @@
         </ul>
     </div>
 </body>
+<script>
+   console.log(document.getElementById('title')); 
+
+</script>
+</body>
+
 </html>
