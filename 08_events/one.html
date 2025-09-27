@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulips</title>
+</head>
+<body style="background-color: rgba(78, 12, 119, 0.402); color: rgb(33, 69, 101); align-items: center;" >
+    <h1>My Favourite Flower</h1>
+    <ul id="images">
+        <li>
+            <img id="yellow_tulips" src="https://images.pexels.com/photos/6007739/pexels-photo-6007739.png" alt="yellow_tulips" width="200px">
+        </li>
+        <li>
+            <img id="red_tulips" src="https://images.pexels.com/photos/1961778/pexels-photo-1961778.jpeg" alt="red_tulips" width="200px">
+        </li>
+        <li>
+            <img id="purple_tulips" src="https://images.pexels.com/photos/1104370/pexels-photo-1104370.jpeg" alt="purple_tulips" width="200px">
+        </li>
+        <li>
+            <img id="white_tulips" src="https://images.pexels.com/photos/10874313/pexels-photo-10874313.jpeg" alt="white_tulips" width="200px">
+        </li>
+    </ul>
+
+    
+</body>
+
+<script>
+    // document.getElementById('yellow_tulips').onclick = function(){
+    //     alert("Yellow tulips clicked")
+    // }
+
+    document.getElementById('yellow_tulips').addEventListener('click',function(){
+        //alert("yellow tulips clicked")
+    },false)
+
+    //attachEvemt()
+    // jQuery - on
+
+    document.getElementById('images').addEventListener('click',function(e){
+        console.log("clicked inside the ul");
+        
+    },false)
+
+    // document.getElementById('red_tulips').addEventListener('click',function(e){
+    //     console.log("red tulips clicked");
+        
+    // },false)
+
+    document.getElementById('red_tulips').addEventListener('click',function(e){
+        console.log("red tulips clicked");
+        //e.stopPropagation()//inner element will not be public.. only print "red tulips clicked" 
+    
+    },false)
+
+    document.getElementById('white_tulips').addEventListener('click',function(e){
+        e.preventDefault();
+        //e.stopPropagation();
+        console.log("white tulips clicked");
+    },false)
+
+
+    //delete the image clicked
+
+    // document.querySelector('#images').addEventListener('click',function(e){
+    //     console.log(e.target.parentNode);
+
+    //     console.log(e.target.tagName);
+    //     if(e.target.tagName=='IMG'){
+    //         console.log(e.target.parentNode);
+    //         let removeIt = e.target.parentNode;
+    //         removeIt.remove()
+    //         // removeIt.parentNode.removeChild(removeIt)
+    //     }
+    // })
+
+
+
+    //additional
+    //change background color according to the flower clicked
+    
+    document.querySelector('#images').addEventListener('click',function(e){
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id);
+            switch(e.target.id){
+                case "yellow_tulips":
+                    document.body.style.backgroundColor = "yellow";
+                    break;
+                
+                case "red_tulips":
+                    document.body.style.backgroundColor = "red";
+                    break;
+
+                case "purple_tulips":
+                    document.body.style.backgroundColor = "purple";
+                    break;
+                
+                case "white_tulips":
+                    document.body.style.backgroundColor = "white";
+                    break;
+            
+            }
+            
+        }
+    },false)
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
