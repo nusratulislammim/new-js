@@ -23,9 +23,9 @@ createUser.prototype.printIt = function(){
 const tea = new createUser("tea",2)
 const coffee = new createUser("Coffee",3)
 
-tea.printIt()
+tea.printIt()//2
 tea.increment()
-tea.printIt()
+tea.printIt()//3
 
 
 
