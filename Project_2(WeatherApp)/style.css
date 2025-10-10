@@ -1,0 +1,23 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(216, 225, 216);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+
+
+}
+.weather-container{
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+
+}
+
+.weather-info{
+    margin-top: 20px;
+}
